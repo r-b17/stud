@@ -1,0 +1,96 @@
+role: Digital Marketing Associate
+based: India
+timezone: Asia/Kolkata
+timezone_label: India
+
+intro: >-
+  Digital marketer working across storytelling, sustainable brand strategy and CRM.
+  I bridge data-driven insight and strategic intuition, and pair AI efficiency with human empathy.
+
+disciplines: [Storytelling, Brand strategy, CRM, Sustainability & CSR, Campaigns, AI content]
+
+approach:
+  - title: Data, then story
+    text: Every campaign starts with what the numbers say, and ends with something a person actually wants to read.
+  - title: Honest about impact
+    text: Sustainable brands earn trust by being transparent, so I build messaging that can stand up to scrutiny.
+  - title: AI with empathy
+    text: AI tools scale the work; the voice, judgement and warmth stay human.
+
+services:
+  - name: Brand & business strategy
+    text: Brand frameworks, employer branding and growth plans that connect a company's values to its business goals.
+    deliverables: [Brand & ambassador frameworks, Employer branding, Market & growth analysis, Executive presentation decks]
+  - name: Sustainability & CSR
+    text: CSR strategy and values-driven storytelling that earns the trust of eco-conscious audiences.
+    deliverables: [CSR strategy, Values-driven storytelling, Brand identity guidelines, Go-to-market & crowdfunding plans]
+  - name: CRM & insights
+    text: Turning complex data into clear, persuasive insight that teams and stakeholders act on.
+    deliverables: [Data-to-insight storytelling, Stakeholder engagement, Workflow & process design, Salesforce · Power BI]
+  - name: Campaigns & content
+    text: Cross-platform campaigns with sharp KPIs, and content that scales with AI without losing its voice.
+    deliverables: [Meta & LinkedIn campaigns, Funnels & KPI tracking, AI-assisted content, Performance reporting]
+
+stats:
+  - value: 30
+    suffix: "%"
+    prefix: "+"
+    label: stakeholder engagement at adidas
+  - value: 20
+    suffix: "%"
+    prefix: "+"
+    label: team productivity from new workflows
+  - value: 8
+    suffix: ""
+    prefix: ""
+    label: brands and companies worked with
+  - value: 4
+    suffix: ""
+    prefix: ""
+    label: countries worked or studied in
+
+note_items:
+  - label: Practice report
+    title: "adidas: digital, CRM & CSR"
+    quote: My MSc practice report looked at how adidas connects digital marketing, CRM and corporate responsibility into one customer story.
+  - label: Bachelor thesis
+    title: Sustainable hospitality
+    quote: "My bachelor thesis asked a simple question: can sustainable business practices help the hospitality industry adapt?"
+  - label: Experiments
+    title: AI, pacing & retention
+    quote: I test AI voiceovers, pacing and visual formats to learn how algorithms distribute content, and what keeps an audience watching.
+  - label: Principle
+    title: AI with empathy
+    quote: AI tools scale the work. The voice, the judgement and the warmth stay human.
+
+ventures:
+  - title: Technical quality assurance & editing
+    year: "2026"
+    text: Audited and restructured a complex, data-heavy research manuscript, with a simple review system that streamlined stakeholder collaboration.
+  - title: Strategic consulting initiative
+    year: "2025"
+    text: Synthesised complex market research into structured strategic frameworks and executive-level presentation decks.
+  - title: Digital media experiments & research
+    year: "2024, 2026"
+    text: Tested content variables (AI voiceovers, pacing, visual formats) to understand algorithm distribution and audience retention.
+
+education:
+  - degree: MSc in Digital Marketing & CRM
+    school: IÉSEG School of Management
+    dates: 2021 – 2023 · Lille, France
+    gpa: "3.79 / 4.0"
+  - degree: Bachelor in International Business
+    school: IÉSEG School of Management
+    dates: 2018 – 2021 · Lille, France
+    gpa: "3.86 / 4.0"
+
+strengths: [Cross-functional leadership, Sustainable thinking, Strategic empathy, Ethical advocacy, Cross-cultural communication]
+tools: [Salesforce, Power BI, SPSS, Smartsheet, Google Analytics, Google Ads, Canva, Figma, HTML, Python]
+languages:
+  - name: English
+    level: Native
+  - name: Hindi
+    level: Native
+  - name: French
+    level: Conversational
+interests: [Prompt engineering & GenAI content, Cross-cultural learning, Dance, Fiction, Pop culture & digital humour]

@@ -1,0 +1,203 @@
+---
+layout: default
+---
+{%- assign P = site.data.profile -%}
+{%- assign cases = site.data.cases -%}
+{%- assign tones = "blush,sky,rose,butter" | split: "," -%}
+{%- assign stickers = "st-mega,st-leaf,st-chart,st-phone" | split: "," -%}
+
+<a class="skip" href="#services">Skip to content</a>
+
+<header class="bar">
+  <a class="bar-avatar" href="#top" aria-label="Back to top">{% include face.html cls="face-mini" vb="62 52 276 276" %}</a>
+  <button class="bar-menu" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+</header>
+
+<nav class="menu" id="menu" hidden aria-label="Sections">
+  <button class="menu-close" type="button" aria-label="Close menu">Close</button>
+  <ol>
+    <li><a href="#services">What I do</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#notes">Notes</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+  <p class="menu-foot"><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+</nav>
+
+<main id="top">
+  <!-- Hero: scrolling opens the mouth, and the black inside becomes the next section -->
+  <section class="hero" aria-label="Introduction">
+    <div class="hero-pin">
+      <h1 class="hero-name">{{ site.title }}</h1>
+      <p class="hero-tag">Digital Marketing</p>
+      <p class="hero-hint">Scroll <span aria-hidden="true">↓</span></p>
+      <div class="face-wrap">
+        <div class="face-float">{% include face.html cls="face-hero" %}</div>
+      </div>
+      <div class="portal">
+        <div class="intro">
+          <p class="intro-text" data-type>A digital marketer specialising in <span class="c-blush">Storytelling</span>, <span class="c-sky">Brand strategy</span>, <span class="c-butter">CRM</span> &amp; <span class="c-leaf">Sustainability</span>.</p>
+          <div class="marquee" aria-label="Brands worked with">
+            <div class="marquee-track">
+              {%- for k in (1..2) -%}
+              <ul {% if k == 2 %}aria-hidden="true"{% endif %}>
+                {%- for c in cases %}<li>{{ c.name }}</li>{% endfor -%}
+              </ul>
+              {%- endfor -%}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services as stacked cards -->
+  <section class="services" id="services" aria-labelledby="services-title">
+    <div class="wrap">
+      <p class="eyebrow light">What I do</p>
+      <h2 class="h2 light" id="services-title">Four things, done with care.</h2>
+    </div>
+    <div class="stack wrap">
+      {%- for s in P.services -%}
+      {%- assign i = forloop.index0 -%}
+      {%- assign brands = cases | where: "discipline", s.name -%}
+      <article class="card tone-{{ tones[i] }}" style="--i:{{ i }}">
+        <div class="card-text">
+          <p class="card-num">0{{ forloop.index }}</p>
+          <h3 class="card-title">{{ s.name }}</h3>
+          <p class="card-sub">{{ s.text }}</p>
+          <ul class="chips">{% for d in s.deliverables %}<li>{{ d }}</li>{% endfor %}</ul>
+          {%- if brands.size > 0 %}
+          <p class="card-brands"><span>Brands</span> {% for b in brands %}{{ b.name }}{% unless forloop.last %} · {% endunless %}{% endfor %}</p>
+          {%- endif %}
+        </div>
+        <svg class="sticker" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+          <g stroke="#fff" stroke-width="22" stroke-linejoin="round" stroke-linecap="round"><use href="#{{ stickers[i] }}"/></g>
+          <g stroke="#140c0f" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"><use href="#{{ stickers[i] }}"/></g>
+        </svg>
+      </article>
+      {%- endfor -%}
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about" aria-labelledby="about-title">
+    <div class="wrap about-grid">
+      <div class="about-photo">
+        <div class="peek">{% include face.html cls="face-peek" %}</div>
+        <img src="{{ '/assets/img/rishika.jpg' | relative_url }}" alt="Portrait of {{ site.title }}" width="600" height="600" loading="lazy">
+      </div>
+      <div class="about-text">
+        <h2 class="h2" id="about-title">A little about me</h2>
+        <p class="lead">{{ P.intro }}</p>
+        <ul class="approach">
+          {%- for a in P.approach %}
+          <li><strong>{{ a.title }}.</strong> {{ a.text }}</li>
+          {%- endfor %}
+        </ul>
+        <ul class="stats">
+          {%- for s in P.stats %}
+          <li><span class="stat-num">{{ s.prefix }}<span data-count="{{ s.value }}">{{ s.value }}</span>{{ s.suffix }}</span><span class="stat-cap">{{ s.label }}</span></li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Notes carousel -->
+  <section class="notes" id="notes" aria-labelledby="notes-title">
+    <div class="wrap notes-inner">
+      <p class="eyebrow light">Notes from the work</p>
+      <h2 class="h2 light" id="notes-title">What I've been thinking about</h2>
+      <div class="note-card" aria-live="polite">
+        <div class="note-strips" aria-hidden="true"><i></i><i></i><i></i></div>
+        {%- for n in P.note_items %}
+        <figure class="note" data-note="{{ forloop.index0 }}" {% unless forloop.first %}hidden{% endunless %}>
+          <p class="note-label">{{ n.label }}</p>
+          <span class="note-mark" aria-hidden="true">“</span>
+          <blockquote><p>{{ n.quote }}</p></blockquote>
+          <figcaption><img src="{{ '/assets/img/rishika.jpg' | relative_url }}" alt="" width="40" height="40" loading="lazy"><span><strong>{{ site.title }}</strong>{{ n.title }}</span></figcaption>
+        </figure>
+        {%- endfor %}
+      </div>
+      <div class="note-nav">
+        <button type="button" class="round" data-dir="-1" aria-label="Previous note">←</button>
+        <span class="note-count"><span id="note-i">1</span> / {{ P.note_items.size }}</span>
+        <button type="button" class="round" data-dir="1" aria-label="Next note">→</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq" aria-labelledby="faq-title">
+    <div class="wrap faq-inner">
+      <div class="faq-peek">{% include face.html cls="face-faq" %}</div>
+      <h2 class="h2 light" id="faq-title">Frequently asked questions</h2>
+      <div class="faq-list">
+        <details open>
+          <summary>What do you do?</summary>
+          <p>{{ P.intro }} My work covers {{ P.disciplines | join: ", " }}.</p>
+        </details>
+        <details>
+          <summary>Which brands have you worked with?</summary>
+          <p>{% for c in cases %}{{ c.name }} ({{ c.title | downcase }}, {{ c.year }}){% unless forloop.last %}; {% endunless %}{% endfor %}.</p>
+        </details>
+        <details>
+          <summary>What tools do you use?</summary>
+          <p>{{ P.tools | join: ", " }}.</p>
+        </details>
+        <details>
+          <summary>Which languages do you work in?</summary>
+          <p>{% for l in P.languages %}{{ l.name }} ({{ l.level | downcase }}){% unless forloop.last %}, {% endunless %}{% endfor %}.</p>
+        </details>
+        <details>
+          <summary>Where did you study?</summary>
+          <p>{% for e in P.education %}{{ e.degree }}, {{ e.school }} ({{ e.dates }}){% unless forloop.last %}; {% endunless %}{% endfor %}.</p>
+        </details>
+        <details>
+          <summary>How do I get in touch?</summary>
+          <p>Use the form below, email <a href="mailto:{{ site.email }}">{{ site.email }}</a>, or find me on <a href="{{ site.linkedin_url }}" rel="noopener" target="_blank">LinkedIn</a>.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <form class="form" id="contact-form" data-email="{{ site.email }}">
+        <h2 class="form-title" id="contact-title">Got an idea or a role in mind? Let's talk.</h2>
+        <label><span>Your name *</span><input name="name" required autocomplete="name"></label>
+        <label><span>Your email *</span><input name="email" type="email" required autocomplete="email"></label>
+        <label><span>Company or brand</span><input name="company" autocomplete="organization"></label>
+        <label><span>Message *</span><textarea name="message" rows="4" required></textarea></label>
+        <fieldset>
+          <legend>Interested in</legend>
+          {%- for s in P.services %}
+          <label class="check"><input type="checkbox" name="topic" value="{{ s.name }}"><span>{{ s.name }}</span></label>
+          {%- endfor %}
+        </fieldset>
+        <button class="btn" type="submit">Let's go</button>
+        <p class="form-note">Opens your email app with the message ready to send.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-top">
+    <ul class="f-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#notes">Notes</a></li>
+    </ul>
+    <ul class="f-links">
+      <li><a href="{{ site.linkedin_url }}" rel="noopener" target="_blank">LinkedIn</a></li>
+      <li><a href="mailto:{{ site.email }}">Email</a></li>
+    </ul>
+    <p class="f-q">Got questions?<br><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+  </div>
+  <div class="footer-face">{% include face.html cls="face-foot" %}</div>
+  <p class="f-base">© {{ site.time | date: '%Y' }} {{ site.title }}</p>
+</footer>

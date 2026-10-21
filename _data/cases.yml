@@ -1,0 +1,89 @@
+# Selected work — roles and brand projects, newest first.
+# discipline must match one of the services in profile.yml (it drives the counts).
+# tone colours the preview card: coral, ink, sand, lagoon, cobalt
+- name: adidas
+  title: Digital strategic planning
+  kind: Role · Germany
+  year: 2023
+  discipline: CRM & insights
+  result: "+30% stakeholder engagement"
+  tone: coral
+  points:
+    - Overhauled communication workflows between sales and project teams, boosting productivity by 20%.
+    - Lifted stakeholder engagement by 30% by turning complex data into persuasive, human-centred strategic insights.
+    - Redesigned the internal digital portfolio and resource hub, improving accessibility and UX by 25%.
+    - Ran cross-functional alignment sessions that sped up onboarding and team integration.
+
+- name: AXA
+  title: Brand ambassador framework
+  kind: Strategy project
+  year: 2022
+  discipline: Brand & business strategy
+  result: "Values that teams live by"
+  tone: cobalt
+  points:
+    - Designed brand ambassador frameworks aligning internal teams and customers with core corporate values.
+
+- name: Accor
+  title: Solidarity strategy
+  kind: Strategy project
+  year: 2021
+  discipline: Brand & business strategy
+  result: "Employer branding with purpose"
+  tone: sand
+  points:
+    - Developed a corporate "Solidarity Strategy" supporting talent acquisition, internal innovation and employer branding.
+
+- name: Elate Digital
+  title: Digital marketing management
+  kind: Role · India
+  year: 2021
+  discipline: Campaigns & content
+  result: "Meta & LinkedIn campaigns"
+  tone: ink
+  points:
+    - Supported cross-platform campaigns on Meta and LinkedIn, optimising KPI tracking, funnels and ad creatives.
+    - Drove original content curation and campaign output, using early AI-assisted tools to scale creative work.
+    - Prepared performance reports that aligned team goals and guided data-driven client discussions.
+
+- name: EcoClipper
+  title: Marketing & communication
+  kind: Role · Netherlands
+  year: 2020
+  discipline: Sustainability & CSR
+  result: "Stories that build trust"
+  tone: lagoon
+  points:
+    - Led sustainability-focused social media strategy built on transparent, values-driven storytelling.
+    - Designed go-to-market and crowdfunding plans for niche investor communities.
+    - Set up core communication processes and brand identity guidelines.
+
+- name: Maybelline
+  title: CSR strategy
+  kind: Strategy project
+  year: 2020
+  discipline: Sustainability & CSR
+  result: "Inclusion as positioning"
+  tone: coral
+  points:
+    - Formulated a targeted CSR strategy focused on community inclusion and brand positioning.
+
+- name: L'Échappée Bière
+  title: 360° market consultancy
+  kind: Strategy project
+  year: 2020
+  discipline: Brand & business strategy
+  result: "Sustainable growth plan"
+  tone: lagoon
+  points:
+    - Identified strategic growth opportunities and brought in sustainable business practices.
+
+- name: Brasserie La Goudale
+  title: Operations improvement
+  kind: Strategy project
+  year: 2019
+  discipline: Brand & business strategy
+  result: "Built to scale"
+  tone: sand
+  points:
+    - Modelled operational improvements for process efficiency and long-term scalability.
