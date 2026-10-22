@@ -7,10 +7,9 @@ description: >-
   Digital marketing professional specialising in high-impact storytelling,
   sustainable brand strategy and CRM, blending AI efficiency with human empathy.
 
-# Change these two lines once the GitHub account exists:
-# for a username "rishika-b", url becomes "https://rishika-b.github.io"
-   url: "https://r-b17.github.io"
-   baseurl: "/stud"
+# Site address. This repo is "stud", so the site lives at r-b17.github.io/stud
+url: "https://r-b17.github.io"
+baseurl: "/stud"
 
 author: Rishika Banerjee
 
