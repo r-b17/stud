@@ -9,8 +9,8 @@ description: >-
 
 # Change these two lines once the GitHub account exists:
 # for a username "rishika-b", url becomes "https://rishika-b.github.io"
-url: "https://USERNAME.github.io"
-baseurl: ""
+   url: "https://r-b17.github.io"
+   baseurl: "/stud"
 
 author: Rishika Banerjee
 
